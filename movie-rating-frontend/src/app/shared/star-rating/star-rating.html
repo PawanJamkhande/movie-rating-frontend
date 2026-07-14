@@ -1,0 +1,9 @@
+<span class="star-row" [class.readonly]="readonly">
+  <mat-icon
+    *ngFor="let star of stars"
+    (click)="select(star)"
+    (mouseenter)="onHover(star)"
+    (mouseleave)="onLeave()">
+    {{ isFilled(star) ? 'star' : 'star_border' }}
+  </mat-icon>
+</span>

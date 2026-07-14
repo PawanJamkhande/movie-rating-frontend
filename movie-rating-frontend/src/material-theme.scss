@@ -1,0 +1,19 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$mrs-primary: mat.m2-define-palette(mat.$m2-indigo-palette);
+$mrs-accent: mat.m2-define-palette(mat.$m2-amber-palette, A400, A200, A700);
+$mrs-warn: mat.m2-define-palette(mat.$m2-red-palette);
+
+$mrs-theme: mat.m2-define-light-theme((
+  color: (
+    primary: $mrs-primary,
+    accent: $mrs-accent,
+    warn: $mrs-warn,
+  ),
+  typography: mat.m2-define-typography-config(),
+  density: 0,
+));
+
+@include mat.all-component-themes($mrs-theme);

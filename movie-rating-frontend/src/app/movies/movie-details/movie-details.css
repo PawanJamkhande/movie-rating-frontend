@@ -1,0 +1,124 @@
+.details-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.back-btn {
+  margin-bottom: 12px;
+  color: #555;
+}
+
+.hero {
+  display: flex;
+  gap: 28px;
+  margin-bottom: 20px;
+}
+
+.poster {
+  width: 220px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+}
+
+.hero-info {
+  flex: 1;
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.title-row h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.year {
+  color: #888;
+  font-weight: 400;
+}
+
+.meta-line {
+  color: #666;
+  margin: 8px 0 12px;
+}
+
+.rating-summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.avg-text {
+  font-weight: 600;
+}
+
+.count-text {
+  color: #888;
+  font-size: 13px;
+}
+
+.description {
+  line-height: 1.6;
+  color: #444;
+}
+
+.rate-section, .reviews-section {
+  margin: 24px 0;
+}
+
+.rate-card {
+  padding: 20px;
+  max-width: 500px;
+}
+
+.review-field {
+  margin-top: 12px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.rate-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.review-item {
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.review-text {
+  margin: 0;
+  color: #444;
+  line-height: 1.5;
+}
+
+.empty-state {
+  color: #888;
+  text-align: center;
+  padding: 20px;
+}
+
+.loading-row {
+  display: flex;
+  justify-content: center;
+  padding: 80px;
+}

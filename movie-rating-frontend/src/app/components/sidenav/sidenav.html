@@ -1,0 +1,23 @@
+<mat-nav-list>
+  <a mat-list-item routerLink="/dashboard" routerLinkActive="active-link">
+    <mat-icon matListItemIcon>dashboard</mat-icon>
+    <span matListItemTitle>Dashboard</span>
+  </a>
+
+  <a mat-list-item routerLink="/movies" routerLinkActive="active-link">
+    <mat-icon matListItemIcon>movie</mat-icon>
+    <span matListItemTitle>All Movies</span>
+  </a>
+
+  <a mat-list-item routerLink="/movies/add" routerLinkActive="active-link" *ngIf="isAdmin">
+    <mat-icon matListItemIcon>add_circle</mat-icon>
+    <span matListItemTitle>Add Movie</span>
+  </a>
+
+  <a mat-list-item routerLink="/my-ratings" routerLinkActive="active-link">
+    <mat-icon matListItemIcon>star_rate</mat-icon>
+    <span matListItemTitle>My Ratings</span>
+  </a>
+
+  <mat-divider></mat-divider>
+</mat-nav-list>

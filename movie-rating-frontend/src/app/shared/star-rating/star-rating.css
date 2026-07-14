@@ -1,0 +1,14 @@
+.star-row {
+  display: inline-flex;
+  align-items: center;
+}
+
+.star-row mat-icon {
+  color: #f5a623;
+  cursor: pointer;
+  user-select: none;
+}
+
+.star-row.readonly mat-icon {
+  cursor: default;
+}

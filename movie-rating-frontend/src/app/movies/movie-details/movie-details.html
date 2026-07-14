@@ -1,0 +1,73 @@
+<div class="details-wrapper" *ngIf="!loading && movie">
+
+  <button mat-button routerLink="/movies" class="back-btn">
+    <mat-icon>arrow_back</mat-icon> Back to all movies
+  </button>
+
+  <div class="hero">
+    <img [src]="movie.posterUrl || fallbackPoster" (error)="onPosterError($event)" [alt]="movie.title" class="poster">
+
+    <div class="hero-info">
+      <div class="title-row">
+        <h1>{{ movie.title }} <span class="year">({{ movie.releaseYear }})</span></h1>
+        <button mat-icon-button *ngIf="authService.isAdmin()" (click)="editMovie()" matTooltip="Edit movie">
+          <mat-icon>edit</mat-icon>
+        </button>
+      </div>
+
+      <p class="meta-line">{{ movie.genres.join(', ') }} · {{ movie.language }} · {{ movie.durationMinutes }} min · Directed by {{ movie.director }}</p>
+
+      <div class="rating-summary">
+        <app-star-rating [rating]="movie.averageRating || 0" [readonly]="true"></app-star-rating>
+        <span class="avg-text">{{ (movie.averageRating || 0).toFixed(1) }} / 5</span>
+        <span class="count-text">({{ movie.totalRatings || 0 }} rating{{ movie.totalRatings === 1 ? '' : 's' }})</span>
+      </div>
+
+      <p class="description">{{ movie.description || 'No description available.' }}</p>
+    </div>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <div class="rate-section">
+    <h2>{{ myExistingRating ? 'Update Your Rating' : 'Rate This Movie' }}</h2>
+
+    <mat-card class="rate-card">
+      <app-star-rating [rating]="myStars" (ratingChange)="myStars = $event"></app-star-rating>
+
+      <mat-form-field appearance="outline" class="full-width review-field">
+        <mat-label>Write a review (optional)</mat-label>
+        <textarea matInput [(ngModel)]="myReview" rows="3" placeholder="What did you think?"></textarea>
+      </mat-form-field>
+
+      <div class="rate-actions">
+        <button mat-stroked-button color="warn" *ngIf="myExistingRating" (click)="deleteMyRating()">
+          Remove Rating
+        </button>
+        <button mat-raised-button color="primary" [disabled]="submitting" (click)="submitRating()">
+          {{ submitting ? 'Saving...' : (myExistingRating ? 'Update Rating' : 'Submit Rating') }}
+        </button>
+      </div>
+    </mat-card>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <div class="reviews-section">
+    <h2>Reviews ({{ otherRatings.length }})</h2>
+
+    <mat-card class="review-item" *ngFor="let r of otherRatings">
+      <div class="review-header">
+        <strong>{{ r.userName }}</strong>
+        <app-star-rating [rating]="r.stars" [readonly]="true"></app-star-rating>
+      </div>
+      <p class="review-text" *ngIf="r.review">{{ r.review }}</p>
+    </mat-card>
+
+    <p *ngIf="otherRatings.length === 0" class="empty-state">No other reviews yet.</p>
+  </div>
+</div>
+
+<div *ngIf="loading" class="loading-row">
+  <mat-spinner diameter="40"></mat-spinner>
+</div>

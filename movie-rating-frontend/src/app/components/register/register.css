@@ -1,0 +1,24 @@
+.auth-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  padding: 24px 0;
+}
+
+.auth-card {
+  width: 380px;
+  padding: 8px;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+.switch-link {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 14px;
+}

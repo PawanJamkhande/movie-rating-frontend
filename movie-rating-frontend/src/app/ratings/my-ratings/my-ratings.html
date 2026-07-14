@@ -1,0 +1,28 @@
+<div class="ratings-wrapper">
+  <h1>My Ratings</h1>
+  <p class="subtitle">Movies you've rated so far</p>
+
+  <div *ngIf="loading" class="loading-row">
+    <mat-spinner diameter="40"></mat-spinner>
+  </div>
+
+  <div *ngIf="!loading">
+    <mat-card class="rating-item" *ngFor="let r of ratings">
+      <div class="rating-main" (click)="viewMovie(r.movieId)">
+        <div class="rating-info">
+          <h3>{{ r.movieTitle }}</h3>
+          <app-star-rating [rating]="r.stars" [readonly]="true"></app-star-rating>
+          <p class="review-text" *ngIf="r.review">{{ r.review }}</p>
+          <p class="date-text" *ngIf="r.ratedDate">Rated on {{ r.ratedDate | date:'mediumDate' }}</p>
+        </div>
+      </div>
+      <button mat-icon-button color="warn" (click)="deleteRating(r)" matTooltip="Remove rating">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-card>
+
+    <p *ngIf="ratings.length === 0" class="empty-state">
+      You haven't rated any movies yet. <a routerLink="/movies">Browse movies</a> to get started.
+    </p>
+  </div>
+</div>

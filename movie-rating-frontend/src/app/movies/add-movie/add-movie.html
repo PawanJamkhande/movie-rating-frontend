@@ -1,0 +1,78 @@
+<div class="form-wrapper">
+  <mat-card class="form-card">
+    <mat-card-header>
+      <mat-card-title>Add New Movie</mat-card-title>
+      <mat-card-subtitle>Fill in the details below</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <form [formGroup]="movieForm" (ngSubmit)="onSubmit()">
+
+        <div class="row">
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Title</mat-label>
+            <input matInput formControlName="title">
+            <mat-error *ngIf="movieForm.get('title')?.invalid">Title is required</mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="row two-col">
+          <mat-form-field appearance="outline">
+            <mat-label>Genres</mat-label>
+            <mat-select formControlName="genres" multiple>
+              <mat-option *ngFor="let g of genresList" [value]="g">{{ g }}</mat-option>
+            </mat-select>
+            <mat-error *ngIf="movieForm.get('genres')?.invalid">Select at least one genre</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Director</mat-label>
+            <input matInput formControlName="director">
+            <mat-error *ngIf="movieForm.get('director')?.invalid">Director is required</mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="row two-col">
+          <mat-form-field appearance="outline">
+            <mat-label>Release Year</mat-label>
+            <input matInput type="number" formControlName="releaseYear">
+            <mat-error *ngIf="movieForm.get('releaseYear')?.invalid">Enter a valid year</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Language</mat-label>
+            <input matInput formControlName="language">
+            <mat-error *ngIf="movieForm.get('language')?.invalid">Language is required</mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="row two-col">
+          <mat-form-field appearance="outline">
+            <mat-label>Duration (minutes)</mat-label>
+            <input matInput type="number" formControlName="durationMinutes">
+            <mat-error *ngIf="movieForm.get('durationMinutes')?.invalid">Enter a valid duration</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Poster URL (optional)</mat-label>
+            <input matInput formControlName="posterUrl" placeholder="https://...">
+          </mat-form-field>
+        </div>
+
+        <div class="row">
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Description (optional)</mat-label>
+            <textarea matInput formControlName="description" rows="3"></textarea>
+          </mat-form-field>
+        </div>
+
+        <div class="actions">
+          <button mat-stroked-button type="button" (click)="cancel()">Cancel</button>
+          <button mat-raised-button color="primary" type="submit" [disabled]="loading">
+            {{ loading ? 'Saving...' : 'Add Movie' }}
+          </button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

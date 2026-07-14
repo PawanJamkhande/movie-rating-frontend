@@ -1,0 +1,47 @@
+<div class="dashboard">
+  <h1>Welcome, {{ authService.getCurrentUser()?.fullName }} 👋</h1>
+  <p class="subtitle">Here's what's happening in the Movie Rating System</p>
+
+  <div class="stats-grid">
+    <mat-card class="stat-card">
+      <mat-icon class="stat-icon">movie</mat-icon>
+      <div class="stat-value">{{ movies.length }}</div>
+      <div class="stat-label">Total Movies</div>
+    </mat-card>
+
+    <mat-card class="stat-card">
+      <mat-icon class="stat-icon">star_rate</mat-icon>
+      <div class="stat-value">{{ totalRatingsCount }}</div>
+      <div class="stat-label">Total Ratings Submitted</div>
+    </mat-card>
+
+    <mat-card class="stat-card">
+      <mat-icon class="stat-icon">person</mat-icon>
+      <div class="stat-value">{{ myRatingsCount }}</div>
+      <div class="stat-label">Movies You've Rated</div>
+    </mat-card>
+  </div>
+
+  <div class="section-header">
+    <h2>Top Rated Movies</h2>
+    <button mat-stroked-button color="primary" routerLink="/movies">View All</button>
+  </div>
+
+  <div *ngIf="loading" class="loading-row">
+    <mat-spinner diameter="36"></mat-spinner>
+  </div>
+
+  <div class="top-rated-grid" *ngIf="!loading">
+    <mat-card class="movie-card" *ngFor="let movie of topRated" (click)="goToMovie(movie.movieId)">
+      <img mat-card-image [src]="movie.posterUrl || fallbackPoster" (error)="onPosterError($event)" [alt]="movie.title">
+      <mat-card-content>
+        <h3>{{ movie.title }}</h3>
+        <p class="genre">{{ movie.genres.join(', ') }} · {{ movie.releaseYear }}</p>
+        <app-star-rating [rating]="movie.averageRating || 0" [readonly]="true"></app-star-rating>
+        <span class="rating-count">({{ movie.totalRatings || 0 }})</span>
+      </mat-card-content>
+    </mat-card>
+
+    <p *ngIf="topRated.length === 0" class="empty-state">No movies yet. {{ authService.isAdmin() ? 'Add the first one!' : 'Check back soon!' }}</p>
+  </div>
+</div>

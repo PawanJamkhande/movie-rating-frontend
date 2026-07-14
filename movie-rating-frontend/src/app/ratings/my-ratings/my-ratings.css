@@ -1,0 +1,50 @@
+.ratings-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.subtitle {
+  color: #666;
+  margin-top: -8px;
+}
+
+.loading-row {
+  display: flex;
+  justify-content: center;
+  padding: 60px;
+}
+
+.rating-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.rating-main {
+  flex: 1;
+  cursor: pointer;
+}
+
+.rating-info h3 {
+  margin: 0 0 6px;
+}
+
+.review-text {
+  color: #555;
+  margin: 8px 0 4px;
+  line-height: 1.5;
+}
+
+.date-text {
+  color: #999;
+  font-size: 12px;
+  margin: 4px 0 0;
+}
+
+.empty-state {
+  text-align: center;
+  color: #888;
+  padding: 40px;
+}

@@ -1,0 +1,25 @@
+.form-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.row {
+  margin-bottom: 8px;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 8px;
+}

@@ -1,0 +1,56 @@
+<div class="list-wrapper">
+  <div class="header-row">
+    <h1>All Movies</h1>
+    <button mat-raised-button color="primary" routerLink="/movies/add" *ngIf="authService.isAdmin()">
+      <mat-icon>add</mat-icon> Add Movie
+    </button>
+  </div>
+
+  <div class="filters-row">
+    <mat-form-field appearance="outline" class="search-field">
+      <mat-label>Search by title</mat-label>
+      <input matInput [(ngModel)]="searchTerm" (ngModelChange)="onSearchChange()" placeholder="e.g. Inception">
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="genre-field">
+      <mat-label>Genre</mat-label>
+      <mat-select [(ngModel)]="selectedGenre" (selectionChange)="onGenreChange()">
+        <mat-option value="">All Genres</mat-option>
+        <mat-option *ngFor="let g of genres" [value]="g">{{ g }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div *ngIf="loading" class="loading-row">
+    <mat-spinner diameter="40"></mat-spinner>
+  </div>
+
+  <div class="movie-grid" *ngIf="!loading">
+    <mat-card class="movie-card" *ngFor="let movie of filteredMovies" (click)="viewMovie(movie.movieId)">
+
+      <div class="admin-actions" *ngIf="authService.isAdmin()">
+        <button mat-icon-button (click)="editMovie($event, movie.movieId)" matTooltip="Edit">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button (click)="deleteMovie($event, movie)" matTooltip="Delete">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+
+      <img mat-card-image [src]="movie.posterUrl || fallbackPoster" (error)="onPosterError($event)" [alt]="movie.title">
+
+      <mat-card-content>
+        <h3>{{ movie.title }}</h3>
+        <p class="meta">{{ movie.genres.join(', ') }} · {{ movie.releaseYear }} · {{ movie.language }}</p>
+
+        <div class="rating-row">
+          <app-star-rating [rating]="movie.averageRating || 0" [readonly]="true"></app-star-rating>
+          <span class="rating-text">{{ (movie.averageRating || 0).toFixed(1) }} ({{ movie.totalRatings || 0 }})</span>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <p *ngIf="filteredMovies.length === 0" class="empty-state">No movies match your filters.</p>
+  </div>
+</div>

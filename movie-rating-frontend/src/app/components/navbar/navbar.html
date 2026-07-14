@@ -1,0 +1,18 @@
+<mat-toolbar color="primary" class="navbar">
+  <button mat-icon-button (click)="menuToggle.emit()">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <span class="brand">🎬 Movie Rating System</span>
+
+  <span class="spacer"></span>
+
+  <span class="user-info" *ngIf="currentUser">
+    {{ currentUser.fullName }}
+    <mat-chip class="role-chip">{{ currentUser.role }}</mat-chip>
+  </span>
+
+  <button mat-icon-button matTooltip="Logout" (click)="logout()">
+    <mat-icon>logout</mat-icon>
+  </button>
+</mat-toolbar>
