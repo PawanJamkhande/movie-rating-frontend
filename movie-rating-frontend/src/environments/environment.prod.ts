@@ -3,5 +3,5 @@
 // Then rebuild the frontend (ng build) and redeploy it.
 export const environment = {
   production: true,
-  apiUrl: 'https://REPLACE-WITH-YOUR-RENDER-URL.onrender.com/api'
+  apiUrl: 'https://movie-rating-backend-3.onrender.com/api'
 };
