@@ -38,9 +38,20 @@
         </button>
       </div>
 
-      <img mat-card-image [src]="movie.posterUrl || fallbackPoster" (error)="onPosterError($event)" [alt]="movie.title">
+<div class="poster-container">
 
-      <mat-card-content>
+  <img mat-card-image
+    [src]="movie.posterUrl || fallbackPoster"
+    (error)="onPosterError($event)"
+    [alt]="movie.title">
+
+  <div class="rating-badge">
+    ⭐ {{ (movie.averageRating || 0).toFixed(1) }}
+  </div>
+
+</div>
+
+<mat-card-content>
         <h3>{{ movie.title }}</h3>
         <p class="meta">{{ movie.genres.join(', ') }} · {{ movie.releaseYear }} · {{ movie.language }}</p>
 
