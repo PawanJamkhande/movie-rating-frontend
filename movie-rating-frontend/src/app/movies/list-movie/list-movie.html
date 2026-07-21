@@ -46,8 +46,18 @@
     [alt]="movie.title">
 
   <div class="rating-badge">
-    ⭐ {{ (movie.averageRating || 0).toFixed(1) }}
-  </div>
+  ⭐ {{ (movie.averageRating || 0).toFixed(1) }}
+</div>
+
+<div class="poster-overlay">
+  <button
+      mat-raised-button
+      color="primary"
+      class="view-details-btn">
+
+      View Details
+  </button>
+</div>
 
 </div>
 
