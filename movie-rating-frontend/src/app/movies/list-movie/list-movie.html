@@ -56,8 +56,18 @@
         <p class="meta">{{ movie.genres.join(', ') }} · {{ movie.releaseYear }} · {{ movie.language }}</p>
 
         <div class="rating-row">
-          <app-star-rating [rating]="movie.averageRating || 0" [readonly]="true"></app-star-rating>
-          <span class="rating-text">{{ (movie.averageRating || 0).toFixed(1) }} ({{ movie.totalRatings || 0 }})</span>
+
+              <app-star-rating
+                  [rating]="movie.averageRating || 0"
+                  [readonly]="true">
+              </app-star-rating>
+            
+              <span class="rating-text">
+                {{ (movie.averageRating || 0).toFixed(1) }}
+                <span class="rating-divider">•</span>
+                {{ movie.totalRatings || 0 }} Ratings
+              </span>
+
         </div>
       </mat-card-content>
     </mat-card>
