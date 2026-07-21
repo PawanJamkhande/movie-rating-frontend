@@ -153,3 +153,36 @@
 
   transition: transform .35s ease;
 }
+
+.poster-overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0,0,0,.45);
+
+    opacity: 0;
+
+    transition: opacity .35s ease;
+}
+
+.movie-card:hover .poster-overlay {
+    opacity: 1;
+}
+
+.view-details-btn {
+    transform: translateY(20px);
+    opacity: 0;
+
+    transition:
+        transform .35s ease,
+        opacity .35s ease;
+}
+
+.movie-card:hover .view-details-btn {
+    transform: translateY(0);
+    opacity: 1;
+}
