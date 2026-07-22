@@ -1,10 +1,20 @@
 <div class="list-wrapper">
   <div class="header-row">
+  <div>
     <h1>All Movies</h1>
-    <button mat-raised-button color="primary" routerLink="/movies/add" *ngIf="authService.isAdmin()">
-      <mat-icon>add</mat-icon> Add Movie
-    </button>
+    <p class="page-subtitle"> Browse, search and rate your favourite movies. </p>
   </div>
+  <button
+      mat-raised-button
+      color="primary"
+      routerLink="/movies/add"
+      *ngIf="authService.isAdmin()">
+
+      <mat-icon>add</mat-icon>
+      Add Movie
+
+  </button>
+</div>
 
   <div class="filters-row">
     <mat-form-field appearance="outline" class="search-field">
