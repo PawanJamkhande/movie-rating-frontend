@@ -24,6 +24,14 @@
       </div>
 
       <p class="description">{{ movie.description || 'No description available.' }}</p>
+      
+      <div class="trailer-section" *ngIf="movie.trailerUrl">
+        <button mat-raised-button color="accent" (click)="watchTrailer()">
+          <mat-icon>play_circle</mat-icon>
+          Watch Official Trailer
+        </button>
+      </div>
+      
     </div>
   </div>
 
