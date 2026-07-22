@@ -30,6 +30,7 @@ export class AddMovie {
       language: ['', Validators.required],
       durationMinutes: [null, [Validators.required, Validators.min(1)]],
       posterUrl: [''],
+      trailerUrl: [''],
       description: ['']
     });
   }
