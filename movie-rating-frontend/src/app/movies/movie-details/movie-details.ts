@@ -6,6 +6,8 @@ import { RatingService } from '../../services/rating-service';
 import { AuthService } from '../../services/auth-service';
 import { Movie } from '../../models/movie';
 import { Rating } from '../../models/rating';
+import { MatDialog } from '@angular/material/dialog';
+import { TrailerDialog } from './trailer-dialog/trailer-dialog';
 
 @Component({
   selector: 'app-movie-details',
@@ -31,7 +33,8 @@ export class MovieDetails implements OnInit {
     private movieService: MovieService,
     private ratingService: RatingService,
     public authService: AuthService,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    private dialog: MatDialog
   ) { }
 
   ngOnInit(): void {
@@ -136,6 +139,22 @@ export class MovieDetails implements OnInit {
 
   // fires when the <img> fails to load (wrong link, webpage instead of an image file,
   // hotlink-blocked, deleted image, etc.) - swap to the placeholder instead of a broken icon
+  watchTrailer(): void {
+
+  if (!this.movie?.trailerUrl) {
+    return;
+  }
+
+  this.dialog.open(TrailerDialog, {
+    width: '900px',
+    maxWidth: '95vw',
+    data: {
+      trailerUrl: this.movie.trailerUrl
+    }
+  });
+
+}
+  
   onPosterError(event: Event): void {
     const img = event.target as HTMLImageElement;
     if (img.src !== this.fallbackPoster) {
