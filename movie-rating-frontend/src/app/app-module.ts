@@ -19,6 +19,7 @@ import { ListMovie } from './movies/list-movie/list-movie';
 import { AddMovie } from './movies/add-movie/add-movie';
 import { UpdateMovie } from './movies/update-movie/update-movie';
 import { MovieDetails } from './movies/movie-details/movie-details';
+import { TrailerDialog } from './movies/movie-details/trailer-dialog/trailer-dialog';
 
 import { MyRatings } from './ratings/my-ratings/my-ratings';
 
@@ -36,6 +37,7 @@ import { StarRatingComponent } from './shared/star-rating/star-rating';
     AddMovie,
     UpdateMovie,
     MovieDetails,
+    TrailerDialog,
     MyRatings,
     StarRatingComponent
   ],
