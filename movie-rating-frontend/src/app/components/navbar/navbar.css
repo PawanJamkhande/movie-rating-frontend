@@ -6,9 +6,24 @@
   align-items: center;
 }
 
-.brand {
-  font-weight: 500;
-  margin-left: 8px;
+.brand-container{
+    display:flex;
+    flex-direction:column;
+    margin-left:12px;
+}
+
+.brand{
+    font-size:22px;
+    font-weight:700;
+    letter-spacing:.4px;
+    line-height:1.1;
+}
+
+.tagline{
+    font-size:11px;
+    opacity:.75;
+    letter-spacing:1px;
+    text-transform:uppercase;
 }
 
 .user-info {
