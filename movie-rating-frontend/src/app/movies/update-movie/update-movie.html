@@ -66,6 +66,17 @@
 
         <div class="row">
           <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Trailer URL (optional)</mat-label>
+            <input
+              matInput
+              formControlName="trailerUrl"
+              placeholder="https://www.youtube.com/watch?v=...">
+            <mat-hint>Paste a YouTube video URL</mat-hint>
+          </mat-form-field>
+        </div>
+        
+        <div class="row">
+          <mat-form-field appearance="outline" class="full-width">
             <mat-label>Description (optional)</mat-label>
             <textarea matInput formControlName="description" rows="3"></textarea>
           </mat-form-field>
