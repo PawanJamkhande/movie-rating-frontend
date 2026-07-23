@@ -13,13 +13,21 @@ export class Register {
 
   registerForm: FormGroup;
   loading = false;
-
+/*
+I use Angular's Dependency Injection to obtain a FormBuilder instance.
+Instead of manually creating it with new, Angular provides a configured instance through the constructor
+The private access modifier limits its usage to the component itself.
+*/
   constructor(
     private fb: FormBuilder,
     private authService: AuthService,
     private router: Router,
     private snackBar: MatSnackBar
   ) {
+    /*
+    I used Angular Reactive Forms. The FormBuilder creates a FormGroup which contains multiple FormControl objects. 
+    Each control represents one input field. Validators are attached to each control to ensure the data is valid before the form is submitted.
+    */
     this.registerForm = this.fb.group({
       fullName: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
@@ -29,6 +37,10 @@ export class Register {
     });
   }
 
+  /*
+  The Register button has type='submit', so clicking it submits the form. 
+  Since the form uses Angular's (ngSubmit) event binding, Angular automatically invokes the onSubmit() method inside the component.
+  */
   onSubmit(): void {
     if (this.registerForm.invalid) {
       this.registerForm.markAllAsTouched();
