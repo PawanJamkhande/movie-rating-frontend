@@ -5,6 +5,8 @@
     max-width: 95vw;
     border-radius: 20px;
     overflow: hidden;
+
+    animation: dialogOpen .28s cubic-bezier(.22,1,.36,1);
 }
 
 .dialog-header{
@@ -21,6 +23,8 @@
     );
 
     border-bottom:1px solid rgba(255,255,255,.08);
+    
+    animation: headerSlide .45s ease;
 
 }
 
@@ -56,7 +60,11 @@
 
 .video-wrapper{
 
-    animation:videoFade .55s ease;
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    background: black;
+    animation: videoFade .55s ease;
 
 }
 
@@ -93,11 +101,7 @@
 
 }
 
-.dialog-container{
 
-    animation: dialogOpen .28s cubic-bezier(.22,1,.36,1);
-
-}
 
 @keyframes dialogOpen{
 
@@ -113,11 +117,7 @@
 
 }
 
-.dialog-header{
 
-    animation:headerSlide .45s ease;
-
-}
 
 @keyframes headerSlide{
 
