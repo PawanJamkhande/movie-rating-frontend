@@ -6,6 +6,7 @@ export interface Movie {
   releaseYear: number;
   description?: string;
   posterUrl?: string;
+  trailerUrl?: string;
   language: string;
   durationMinutes?: number;
   status?: string;
