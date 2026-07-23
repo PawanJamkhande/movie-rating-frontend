@@ -148,6 +148,7 @@ export class MovieDetails implements OnInit {
   this.dialog.open(TrailerDialog, {
     width: '900px',
     maxWidth: '95vw',
+    panelClass: 'premium-trailer-dialog',
     data: {
       trailerUrl: this.movie.trailerUrl
     }
