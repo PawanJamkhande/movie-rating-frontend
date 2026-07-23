@@ -13,6 +13,8 @@ export class Register {
 
   registerForm: FormGroup;
   loading = false;
+  hidePassword = true;
+  hideConfirmPassword = true;
 /*
 I use Angular's Dependency Injection to obtain a FormBuilder instance.
 Instead of manually creating it with new, Angular provides a configured instance through the constructor
