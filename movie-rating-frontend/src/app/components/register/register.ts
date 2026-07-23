@@ -17,6 +17,10 @@ export class Register {
 I use Angular's Dependency Injection to obtain a FormBuilder instance.
 Instead of manually creating it with new, Angular provides a configured instance through the constructor
 The private access modifier limits its usage to the component itself.
+
+Dependency Injection is a design pattern used by Angular to provide required objects, such as services, to components automatically. 
+Instead of creating objects manually using new, Angular creates, manages, and injects them through the constructor. 
+This reduces coupling, improves reusability, and makes the application easier to maintain and test.
 */
   constructor(
     private fb: FormBuilder,
