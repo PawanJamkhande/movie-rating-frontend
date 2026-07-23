@@ -118,3 +118,60 @@
         transform:translateY(0);
     }
 }
+
+/* ---------- Angular Material Outline ---------- */
+
+::ng-deep .auth-card .mat-mdc-form-field {
+
+    width: 100%;
+
+}
+
+::ng-deep .auth-card .mdc-notched-outline__leading,
+::ng-deep .auth-card .mdc-notched-outline__notch,
+::ng-deep .auth-card .mdc-notched-outline__trailing {
+
+    border-color: rgba(255,255,255,.25) !important;
+
+}
+
+::ng-deep .auth-card .mat-mdc-form-field:hover
+.mdc-notched-outline__leading,
+::ng-deep .auth-card .mat-mdc-form-field:hover
+.mdc-notched-outline__notch,
+::ng-deep .auth-card .mat-mdc-form-field:hover
+.mdc-notched-outline__trailing {
+
+    border-color: rgba(255,255,255,.45) !important;
+
+}
+
+::ng-deep .auth-card .mat-mdc-form-field.mat-focused
+.mdc-notched-outline__leading,
+::ng-deep .auth-card .mat-mdc-form-field.mat-focused
+.mdc-notched-outline__notch,
+::ng-deep .auth-card .mat-mdc-form-field.mat-focused
+.mdc-notched-outline__trailing {
+
+    border-color: #4f7cff !important;
+    border-width: 2px !important;
+
+}
+
+::ng-deep .auth-card input {
+
+    color: white !important;
+
+}
+
+::ng-deep .auth-card .mat-mdc-floating-label {
+
+    color: #cfcfcf !important;
+
+}
+
+::ng-deep .auth-card .mat-mdc-form-field.mat-focused .mat-mdc-floating-label {
+
+    color: #4f7cff !important;
+
+}
