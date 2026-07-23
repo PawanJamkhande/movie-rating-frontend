@@ -1,20 +1,38 @@
 <div class="dialog-container">
 
   <div class="dialog-header">
-    <h2>Official Trailer</h2>
 
-    <button mat-icon-button (click)="close()">
+    <div>
+      <h2>🎬 Official Trailer</h2>
+      <p>Watch the official trailer in high quality</p>
+    </div>
+
+    <button
+      mat-icon-button
+      class="close-btn"
+      (click)="close()">
+
       <mat-icon>close</mat-icon>
+
     </button>
+
   </div>
 
   <div class="video-wrapper">
+
     <iframe
       [src]="trailerUrl"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowfullscreen>
     </iframe>
+
+  </div>
+
+  <div class="dialog-footer">
+
+    🍿 Enjoy your movie!
+
   </div>
 
 </div>
