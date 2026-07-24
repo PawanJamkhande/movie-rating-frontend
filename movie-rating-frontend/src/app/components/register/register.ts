@@ -38,8 +38,8 @@ This reduces coupling, improves reusability, and makes the application easier to
       fullName: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
       mobile: ['', [Validators.required, Validators.pattern(/^[6-9]\d{9}$/)]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
-      role: ['USER', [Validators.required]]
+      password: ['', [Validators.required, Validators.minLength(6)]]
+
     });
   }
 
