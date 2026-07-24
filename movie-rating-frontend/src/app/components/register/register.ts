@@ -13,6 +13,10 @@ import { AuthService } from '../../services/auth-service';
 
 export const passwordMatchValidator = (): ValidatorFn => {
     return (control: AbstractControl): ValidationErrors | null => {
+
+        const password = control.get('password');
+        const confirmPassword = control.get('confirmPassword');
+
         return null;
     };
 };
@@ -22,6 +26,7 @@ export const passwordMatchValidator = (): ValidatorFn => {
   templateUrl: './register.html',
   styleUrl: './register.css'
 })
+  
 export class Register {
 
   registerForm: FormGroup;
