@@ -11,6 +11,12 @@ import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { AuthService } from '../../services/auth-service';
 
+export const passwordMatchValidator = (): ValidatorFn => {
+    return (control: AbstractControl): ValidationErrors | null => {
+        return null;
+    };
+};
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.html',
