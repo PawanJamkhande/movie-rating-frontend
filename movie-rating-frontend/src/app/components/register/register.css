@@ -146,7 +146,19 @@
     color:#90caf9;
 
 }
+.error-message{
 
+    color:#ff6b6b;
+
+    font-size:13px;
+
+    margin-top:-8px;
+
+    margin-bottom:12px;
+
+    padding-left:4px;
+
+}
 @keyframes cardAppear{
 
     from{
