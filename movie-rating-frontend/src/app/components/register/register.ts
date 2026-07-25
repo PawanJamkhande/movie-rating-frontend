@@ -66,12 +66,17 @@ This reduces coupling, improves reusability, and makes the application easier to
     Each control represents one input field. Validators are attached to each control to ensure the data is valid before the form is submitted.
     */
     this.registerForm = this.fb.group({
-      fullName: ['', [Validators.required]],
-      email: ['', [Validators.required, Validators.email]],
-      mobile: ['', [Validators.required, Validators.pattern(/^[6-9]\d{9}$/)]],
-      password: ['', [Validators.required, Validators.minLength(6)]]
 
-    });
+    fullName: ['', [Validators.required]],
+    email: ['', [Validators.required, Validators.email]],
+    mobile: ['', [Validators.required, Validators.pattern(/^[6-9]\d{9}$/)]],
+    password: ['', [Validators.required, Validators.minLength(6)]],
+    confirmPassword: ['', Validators.required]
+
+},
+{
+    validators: passwordMatchValidator()
+});
   }
 
   /*
