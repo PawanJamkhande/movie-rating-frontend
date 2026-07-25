@@ -123,15 +123,24 @@
           *ngIf="registerForm.get('confirmPassword')?.hasError('required')">
           Confirm your password
         </mat-error>
+       
+        <mat-error
+            *ngIf="registerForm.hasError('passwordMismatch')
+                && registerForm.get('confirmPassword')?.touched">
+        
+            Passwords do not match.
+        
+        </mat-error>
       </mat-form-field>
-
+      
+      
      
       <button
         mat-raised-button
         color="primary"
         class="login-btn"
         type="submit"
-        [disabled]="loading">
+        [disabled]="loading || registerForm.invalid">
 
         {{loading ? 'Creating Account...' : 'Create Account'}}
         
