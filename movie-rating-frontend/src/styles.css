@@ -76,3 +76,117 @@ body.light-theme{
     --text-secondary:#6b7280;
 
 }
+
+/* =========================================
+   GLOBAL MATERIAL THEME FIX
+========================================= */
+
+body.light-theme{
+
+    color:#111827;
+
+}
+
+body.light-theme .mat-mdc-card{
+
+    background:#ffffff !important;
+
+    color:#111827 !important;
+
+}
+
+body.light-theme .mat-mdc-card-title,
+
+body.light-theme .mat-mdc-card-subtitle,
+
+body.light-theme .mat-mdc-card-content{
+
+    color:#111827 !important;
+
+}
+
+body.light-theme .mat-toolbar{
+
+    color:#111827 !important;
+
+}
+
+body.light-theme .mat-icon{
+
+    color:#111827 !important;
+
+}
+
+/* ---------- Form Fields ---------- */
+
+body.light-theme input,
+
+body.light-theme textarea{
+
+    color:#111827 !important;
+
+}
+
+body.light-theme .mat-mdc-floating-label{
+
+    color:#4b5563 !important;
+
+}
+
+body.light-theme .mat-mdc-select-value{
+
+    color:#111827 !important;
+
+}
+
+body.light-theme .mat-mdc-select-arrow{
+
+    color:#111827 !important;
+
+}
+
+body.light-theme .mdc-notched-outline__leading,
+
+body.light-theme .mdc-notched-outline__notch,
+
+body.light-theme .mdc-notched-outline__trailing{
+
+    border-color:#cbd5e1 !important;
+
+}
+
+body.light-theme .mat-mdc-form-field-focus-overlay{
+
+    background:transparent !important;
+
+}
+
+body.light-theme .mat-mdc-form-field-hint,
+
+body.light-theme .mat-mdc-form-field-error{
+
+    color:#6b7280 !important;
+
+}
+
+/* ---------- Buttons ---------- */
+
+body.light-theme .mat-mdc-raised-button{
+
+    color:white;
+
+}
+
+body.light-theme .mat-mdc-outlined-button{
+
+    color:#111827;
+
+}
+
+/* ---------- Lists ---------- */
+
+body.light-theme .mat-mdc-list-item{
+
+    color:#111827 !important;
+
+}
