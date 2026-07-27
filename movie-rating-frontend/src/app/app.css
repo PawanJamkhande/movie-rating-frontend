@@ -1,29 +1,31 @@
-.app-container {
-  height: calc(100vh - 64px);
+.app-container{
+    height:calc(100vh - 64px);
 }
 
 .app-sidenav{
 
     width:240px;
-    background:rgba(30,41,59,.92);
+
+    background:var(--bg-secondary);
+
     backdrop-filter:blur(18px);
+
     border-right:1px solid rgba(255,255,255,.08);
-    color:white;
+
+    color:var(--text-primary);
+
+    transition:.35s ease;
 
 }
 
-.app-content {
+.app-content{
 
-    padding: 28px;
+    padding:28px;
 
-    background:
-        radial-gradient(
-            circle at top,
-            #2563eb 0%,
-            #1e293b 35%,
-            #0f172a 100%
-        );
+    background:var(--bg-primary);
 
-    min-height: 100%;
+    min-height:100%;
+
+    transition:.35s ease;
 
 }
