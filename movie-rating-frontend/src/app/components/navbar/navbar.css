@@ -9,7 +9,7 @@
 
     height: 72px;
 
-    background: rgba(15,23,42,.90) !important;
+    background:var(--bg-secondary)!important;
 
     backdrop-filter: blur(18px);
 
@@ -32,7 +32,7 @@
 
     font-size:24px;
     font-weight:700;
-    color:white;
+    color:var(--text-primary);
 
 }
 
@@ -42,7 +42,7 @@
 
     font-size:11px;
 
-    color:#cbd5e1;
+    color:var(--text-secondary);
 
     text-transform:uppercase;
 
@@ -64,7 +64,7 @@
 
     gap:10px;
 
-    color:white;
+    color:var(--text-primary);
 
     font-weight:500;
 
