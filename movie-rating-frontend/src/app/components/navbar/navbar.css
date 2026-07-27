@@ -1,47 +1,95 @@
 .navbar {
-    position:sticky;
-    top:0;
-    z-index:1000;
 
-    display:flex;
-    align-items:center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 
-    height:72px;
+    display: flex;
+    align-items: center;
 
-    box-shadow:0 4px 18px rgba(0,0,0,.15);
+    height: 72px;
+
+    background: rgba(20,20,20,.75) !important;
+
+    backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        0 8px 30px rgba(0,0,0,.35);
+
 }
 
 .brand-container{
+
     display:flex;
     flex-direction:column;
-    margin-left:12px;
+    margin-left:14px;
+
 }
 
 .brand{
-    font-size:22px;
+
+    font-size:24px;
     font-weight:700;
-    letter-spacing:.4px;
-    line-height:1.1;
+    color:white;
+
 }
 
 .tagline{
+
+    margin-top:2px;
+
     font-size:11px;
-    opacity:.75;
-    letter-spacing:1px;
+
+    color:#cbd5e1;
+
     text-transform:uppercase;
+
+    letter-spacing:1.5px;
+
 }
 
-.user-info {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-right: 12px;
-  font-size: 14px;
+.spacer{
+
+    flex:1;
+
 }
 
-.role-chip {
-  font-size: 11px;
-  min-height: 22px;
-  background: rgba(255, 255, 255, 0.2) !important;
-  color: white;
+.user-info{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:white;
+
+    font-weight:500;
+
+    margin-right:15px;
+
+}
+
+.role-chip{
+
+    background:rgba(79,124,255,.18)!important;
+
+    color:#90caf9!important;
+
+    border:1px solid rgba(79,124,255,.35);
+
+}
+
+button{
+
+    transition:.3s ease;
+
+}
+
+button:hover{
+
+    transform:scale(1.08);
+
 }
