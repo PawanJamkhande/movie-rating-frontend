@@ -1,6 +1,6 @@
 <div class="dashboard">
   <h1>Welcome, {{ authService.getCurrentUser()?.fullName }} 👋</h1>
-  <p class="subtitle">Here's what's happening in the Movie Rating System</p>
+  <p class="subtitle"> Manage and explore your favourite movies. </p>
 
   <div class="stats-grid">
     <mat-card class="stat-card">
@@ -24,7 +24,7 @@
 
   <div class="section-header">
     <h2>Top Rated Movies</h2>
-    <button mat-stroked-button color="primary" routerLink="/movies">View All</button>
+    <button mat-raised-button color="primary" routerLink="/movies">View All</button>
   </div>
 
   <div *ngIf="loading" class="loading-row">
