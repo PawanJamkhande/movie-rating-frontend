@@ -154,6 +154,38 @@
 
 }
 
+.movie-card mat-card-content{
+
+    background:white;
+
+    color:#111827;
+
+}
+
+.movie-card h3{
+
+    color:#111827;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    margin-bottom:6px;
+
+}
+
+.genre{
+
+    color:#6b7280;
+
+}
+
+.rating-count{
+
+    color:#6b7280;
+
+}
+
 .genre{
 
     color:#888;
