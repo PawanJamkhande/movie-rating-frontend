@@ -4,7 +4,7 @@
 
     margin:auto;
 
-    color:white;
+    color:var(--text-primary);
 
 }
 
@@ -44,7 +44,7 @@
 
 .stat-card{
 
-    background:rgba(20,20,20,.78)!important;
+    background:var(--card-bg);
 
     backdrop-filter:blur(18px);
 
@@ -96,7 +96,7 @@
 
 .stat-label{
 
-    color:#cbd5e1;
+    color:var(--text-secondary);
 
 }
 
@@ -114,7 +114,7 @@
 
 .section-header h2{
 
-    color:white;
+    color:var(--text-primary);
 
 }
 
