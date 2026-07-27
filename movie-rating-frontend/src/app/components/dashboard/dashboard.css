@@ -167,27 +167,11 @@
 
 
 .genre{
-
-    color:#6b7280;
-
+    color:var(--text-secondary);
 }
 
 .rating-count{
-
-    color:#6b7280;
-
-}
-
-.genre{
-
-    color:#888;
-
-}
-
-.rating-count{
-
-    color:#999;
-
+    color:var(--text-secondary);
 }
 
 .loading-row{
