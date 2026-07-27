@@ -30,13 +30,23 @@ html, body {
 }
 
 
+
+
 body.dark-theme{
 
-    --bg-primary:#0f172a;
+    --bg-primary:
+        radial-gradient(
+            circle at top,
+            #2563eb 0%,
+            #1e293b 35%,
+            #0f172a 100%
+        );
 
-    --bg-secondary:#1e293b;
+    --bg-secondary:rgba(30,41,59,.92);
 
     --card-bg:rgba(20,20,20,.82);
+
+    --surface:#111827;
 
     --text-primary:#ffffff;
 
@@ -48,14 +58,21 @@ body.dark-theme{
 
 body.light-theme{
 
-    --bg-primary:#f4f7fb;
+    --bg-primary:
+        linear-gradient(
+            to bottom,
+            #eef4ff,
+            #f8fbff
+        );
 
     --bg-secondary:#ffffff;
 
-    --card-bg:rgba(255,255,255,.92);
+    --card-bg:#ffffff;
+
+    --surface:#ffffff;
 
     --text-primary:#111827;
 
-    --text-secondary:#4b5563;
+    --text-secondary:#6b7280;
 
 }
