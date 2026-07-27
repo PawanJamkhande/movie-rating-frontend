@@ -8,6 +8,17 @@
 }
 
 .app-content {
-  padding: 24px;
-  background: #f5f6fa;
+
+    padding: 28px;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #2563eb 0%,
+            #1e293b 35%,
+            #0f172a 100%
+        );
+
+    min-height: 100%;
+
 }
