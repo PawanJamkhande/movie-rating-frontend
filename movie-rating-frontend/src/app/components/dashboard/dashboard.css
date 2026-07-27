@@ -154,25 +154,7 @@
 
 }
 
-.movie-card mat-card-content{
 
-    background:white;
-
-    color:#111827;
-
-}
-
-.movie-card h3{
-
-    color:#111827;
-
-    font-size:18px;
-
-    font-weight:600;
-
-    margin-bottom:6px;
-
-}
 
 .genre{
 
@@ -215,5 +197,39 @@
     text-align:center;
 
     grid-column:1/-1;
+
+}
+
+.movie-card mat-card-content{
+
+    background:#ffffff;
+
+    color:#111827;
+
+    padding:16px;
+
+}
+
+.movie-card h3{
+
+    color:#111827;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    margin-bottom:6px;
+
+}
+
+.movie-card .genre{
+
+    color:#6b7280;
+
+}
+
+.movie-card .rating-count{
+
+    color:#6b7280;
 
 }
