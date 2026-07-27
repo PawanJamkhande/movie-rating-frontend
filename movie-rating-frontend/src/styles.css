@@ -28,3 +28,34 @@ html, body {
     overflow: hidden !important;
     background: transparent !important;
 }
+
+
+body.dark-theme{
+
+    --bg-primary:#0f172a;
+
+    --bg-secondary:#1e293b;
+
+    --card-bg:rgba(20,20,20,.82);
+
+    --text-primary:#ffffff;
+
+    --text-secondary:#cbd5e1;
+
+}
+
+
+
+body.light-theme{
+
+    --bg-primary:#f4f7fb;
+
+    --bg-secondary:#ffffff;
+
+    --card-bg:rgba(255,255,255,.92);
+
+    --text-primary:#111827;
+
+    --text-secondary:#4b5563;
+
+}
