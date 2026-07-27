@@ -142,7 +142,7 @@
     transform:translateY(-8px);
 
     box-shadow:
-    0 15px 35px rgba(37,99,235,.20);
+        0 15px 35px rgba(37,99,235,.20);
 
 }
 
@@ -150,7 +150,17 @@
 
     height:260px;
 
+    width:100%;
+
     object-fit:cover;
+
+    transition:
+        transform .45s ease;
+
+}
+.movie-card:hover img{
+
+    transform:scale(1.08);
 
 }
 
