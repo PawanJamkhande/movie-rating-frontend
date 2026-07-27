@@ -66,7 +66,9 @@
 
     transform:translateY(-8px);
 
-    box-shadow:0 20px 40px rgba(0,0,0,.35);
+    box-shadow:
+    0 15px 35px rgba(37,99,235,.25),
+    0 20px 40px rgba(0,0,0,.35);
 
 }
 
@@ -129,14 +131,18 @@
 .movie-card{
 
     transition:.3s ease;
-
     cursor:pointer;
+    border-radius:18px!important;
+    overflow:hidden;
 
 }
 
 .movie-card:hover{
 
     transform:translateY(-8px);
+
+    box-shadow:
+    0 15px 35px rgba(37,99,235,.20);
 
 }
 
