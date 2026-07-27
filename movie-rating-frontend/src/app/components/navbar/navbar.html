@@ -21,7 +21,18 @@
     {{ currentUser.fullName }}
     <mat-chip class="role-chip">{{ currentUser.role }}</mat-chip>
   </span>
-
+  
+  <button
+      mat-icon-button
+      matTooltip="Toggle Theme"
+      (click)="toggleTheme()">
+  
+      <mat-icon>
+          {{ themeService.theme === 'dark' ? 'light_mode' : 'dark_mode' }}
+      </mat-icon>
+  
+  </button>
+  
   <button mat-icon-button matTooltip="Logout" (click)="logout()">
     <mat-icon>logout</mat-icon>
   </button>
