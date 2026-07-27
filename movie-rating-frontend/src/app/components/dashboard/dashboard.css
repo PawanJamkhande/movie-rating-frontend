@@ -196,17 +196,15 @@
 
 .movie-card mat-card-content{
 
-    background:#ffffff;
-
-    color:#111827;
-
-    padding:16px;
+    background:var(--surface);
+    color:var(--text-primary);
+    padding: 16px;
 
 }
 
 .movie-card h3{
 
-    color:#111827;
+    color:var(--text-primary);
 
     font-size:18px;
 
