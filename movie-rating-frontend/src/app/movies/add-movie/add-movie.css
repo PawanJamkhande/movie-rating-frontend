@@ -8,8 +8,7 @@
 
 .form-card{
 
-    background:rgba(20,20,20,.82)!important;
-
+    background:var(--card-bg);
     backdrop-filter:blur(18px);
 
     border-radius:24px;
@@ -21,13 +20,13 @@
     box-shadow:
         0 20px 50px rgba(0,0,0,.35);
 
-    color:white;
+    color:var(--text-primary);
 
 }
 
 .form-card mat-card-title{
 
-    color:white;
+    color:var(--text-primary);
 
     font-size:28px;
 
@@ -37,7 +36,7 @@
 
 .form-card mat-card-subtitle{
 
-    color:#cbd5e1;
+    color:var(--text-secondary);
 
 }
 
@@ -85,7 +84,7 @@
 
 ::ng-deep .form-card textarea{
 
-    color:white!important;
+    color:var(--text-primary);
 
 }
 
