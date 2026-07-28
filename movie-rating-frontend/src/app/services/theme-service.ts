@@ -18,16 +18,6 @@ export class ThemeService {
         ? 'light'
         : 'dark';
 
-    this.applyTheme();
-
-  }
-
-  private applyTheme(): void {
-
-    document.body.classList.remove('dark-theme', 'light-theme');
-
-    document.body.classList.add(`${this.currentTheme}-theme`);
-
     localStorage.setItem('theme', this.currentTheme);
 
   }
@@ -37,12 +27,12 @@ export class ThemeService {
     this.currentTheme =
       localStorage.getItem('theme') || 'dark';
 
-    this.applyTheme();
-
   }
 
   get theme(): string {
+
     return this.currentTheme;
+
   }
 
 }
