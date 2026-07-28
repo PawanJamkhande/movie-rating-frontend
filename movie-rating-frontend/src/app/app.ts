@@ -16,7 +16,7 @@ export class App {
   hideShellRoutes = ['/login', '/register'];
   currentUrl = '/login';
 
-  constructor(public authService: AuthService, private router: Router, private themeService: ThemeService) {
+  constructor(public authService: AuthService, private router: Router, public themeService: ThemeService) {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         this.currentUrl = event.urlAfterRedirects;
