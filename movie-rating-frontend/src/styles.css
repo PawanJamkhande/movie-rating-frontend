@@ -51,6 +51,9 @@ html, body {
     --text-primary:#ffffff;
 
     --text-secondary:#cbd5e1;
+  transition:
+    background .3s ease,
+    color .3s ease;
 
 }
 
@@ -74,6 +77,9 @@ html, body {
     --text-primary:#111827;
 
     --text-secondary:#6b7280;
+  transition:
+    background .3s ease,
+    color .3s ease;
 
 }
 
@@ -188,5 +194,31 @@ html, body {
 .app-shell.light-theme .mat-mdc-list-item{
 
     color:#111827 !important;
+
+}
+
+/* Dropdown Panels */
+
+.app-shell.light-theme .mat-mdc-select-panel,
+.app-shell.light-theme .mat-mdc-menu-panel{
+
+    background:#ffffff !important;
+
+}
+
+.app-shell.light-theme .mat-mdc-option{
+
+    color:#111827 !important;
+
+}
+
+.app-shell.light-theme .mat-mdc-option:hover{
+
+    background:#eef4ff !important;
+
+}
+.app-shell.light-theme .mat-mdc-icon-button:hover{
+
+    background:rgba(37,99,235,.08);
 
 }
